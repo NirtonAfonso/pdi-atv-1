@@ -29,16 +29,16 @@ public class BasicThreshold {
 				blue = pixel.getBlue();
 				gray = ((red*3) + (green/4)-(blue*2))/3;
 				if(gray > threshold) {
-					image.setRGB(j, i, Color.WHITE.getRGB());
-				}else {
 					image.setRGB(j, i, Color.BLACK.getRGB());
+				}else {
+					image.setRGB(j, i, Color.WHITE.getRGB());
 					
 				}
 			}
 		}
 		
 		File output = new File("D:\\Users\\nirto\\Documents\\GitHub\\"+
-							  "PDI\\pdi-atv-1\\src\\images\\image1_bw2.jpg");
+							  "PDI\\pdi-atv-1\\src\\images\\image1_bw3.jpg");
 		ImageIO.write(image, "jpg", output);
 		
 		System.out.println("Done!");
